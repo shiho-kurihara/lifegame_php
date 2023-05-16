@@ -13,14 +13,15 @@ class LifegameLogicTest extends TestCase
      */
     public function 初期表示(): void
     {
-        list($g, $b, $s) = run_lifegame();
+        $params = [];
+        list($g, $board, $s) = run_lifegame($params);
         $this->assertSame([
             ["□", "□", "□", "□", "□"],
             ["□", "□", "□", "□", "□"],
             ["□", "■", "■", "■", "□"],
             ["□", "□", "□", "□", "□"],
             ["□", "□", "□", "□", "□"],
-        ], $b);
+        ], $board);
     }
 
 }

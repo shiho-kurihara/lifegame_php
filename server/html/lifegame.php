@@ -3,7 +3,7 @@ require './now.php';
 require './lifegame_logic.php';
 
 // TODO: $_GET を外から渡す
-list($g, $b, $s) = run_lifegame();
+list($g, $b, $s) = run_lifegame($_GET);
 ?>
 <!doctype html>
 <head>

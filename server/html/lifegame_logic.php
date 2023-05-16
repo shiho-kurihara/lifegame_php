@@ -1,9 +1,12 @@
 <?php
 
-// TODO: $_GET を外から渡す
-function run_lifegame() {
-    if (isset ($_GET["prev"])) {
-        $prev = $_GET["prev"];
+/*
+ * - [ ] $_GETを外から渡す
+ *
+ * */
+function run_lifegame($params) {
+    if (isset ($params["prev"])) {
+        $prev = $params["prev"];
         $b = [];
         $lns = explode('9', $prev);
         for ($i = 0, $len = count($lns); $i < $len; $i++) {
@@ -77,7 +80,7 @@ function run_lifegame() {
             $n[] = implode('', $nr);
         }
         $s = implode('9', $n);
-        $g = (int)$_GET["g"];
+        $g = (int)$params["g"];
         return [$g, $b, $s];
     } else {
         $b = [];
