@@ -23,9 +23,9 @@ services:
 
   # E2E テスト用 Selenium サーバー
   selenium-chrome:
-    # image: selenium/standalone-chrome:4.9.1
+    image: selenium/standalone-chrome:4.9.1
     # M1/M2 Mac で動かす場合は seleniarm イメージを使う
-    image: seleniarm/standalone-chromium:4.9.1
+    # image: seleniarm/standalone-chromium:4.9.1
     shm_size: '2gb'
     logging:
       driver: none
