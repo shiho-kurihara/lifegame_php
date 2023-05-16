@@ -42,4 +42,23 @@ class LifegameLogicTest extends TestCase
         ], $board);
     }
 
+    /**
+     * @test
+     * @small
+     * @group characterization
+     */
+    public function test_3回目の表示(): void
+    {
+        $prev = '00000900100900100900100900000';
+        $g = 3;
+        list($g, $board, $s) = run_lifegame($prev,$g);
+        $this->assertSame([
+            ["□", "□", "□", "□", "□"],
+            ["□", "□", "□", "□", "□"],
+            ["□", "■", "■", "■", "□"],
+            ["□", "□", "□", "□", "□"],
+            ["□", "□", "□", "□", "□"],
+        ], $board);
+    }
+
 }
