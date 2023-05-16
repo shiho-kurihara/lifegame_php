@@ -1,12 +1,12 @@
 <?php
 
 /*
- * - [ ] $_GETを外から渡す
+ * - [x] $_GETを外から渡す
+ * - [x] prevとgだけ渡すようにしてみる
  *
  * */
-function run_lifegame($params) {
-    if (isset ($params["prev"])) {
-        $prev = $params["prev"];
+function run_lifegame($prev,$g) {
+    if (isset ($prev)) {
         $b = [];
         $lns = explode('9', $prev);
         for ($i = 0, $len = count($lns); $i < $len; $i++) {
@@ -80,7 +80,6 @@ function run_lifegame($params) {
             $n[] = implode('', $nr);
         }
         $s = implode('9', $n);
-        $g = (int)$params["g"];
         return [$g, $b, $s];
     } else {
         $b = [];

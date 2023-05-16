@@ -13,8 +13,7 @@ class LifegameLogicTest extends TestCase
      */
     public function 初期表示(): void
     {
-        $params = [];
-        list($g, $board, $s) = run_lifegame($params);
+        list($g, $board, $s) = run_lifegame(null,null);
         $this->assertSame([
             ["□", "□", "□", "□", "□"],
             ["□", "□", "□", "□", "□"],
